@@ -51,7 +51,7 @@ double[,] GetArray(int m, int n, int minValue, int maxValue)
     {
         for (int j = 0; j < n; j++)
         {
-            result[i, j] = new Random().Next(minValue, maxValue + 1) + new Random().NextDouble();
+            result[i, j] = new Random().NextDouble()* (minValue - maxValue) + minValue;
             if (result[i, j] > maxValue) result[i, j] = maxValue;
         }
     }

@@ -25,14 +25,15 @@ void PrintArray(double[,] inArray)
         Console.WriteLine();
     }
 }
-double[,] GetArray(int m, int n, int minValue, int maxValue)
+double[,] GetArray(int m, int n, double minValue, double maxValue)
 {
+    
     double[,] result = new double[m, n];
     for (int i = 0; i < m; i++)
     {
         for (int j = 0; j < n; j++)
         {
-            result[i, j] = new Random().Next(minValue, maxValue + 1) + new Random().NextDouble();
+            result[i, j] = new Random().NextDouble()* (minValue - maxValue) + minValue;
         }
     }
     return result;
